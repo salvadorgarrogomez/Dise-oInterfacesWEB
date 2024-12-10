@@ -1,0 +1,97 @@
+/* Variables CSS para crear un sistema de columnas fluido basado en un tamaño base de 1600 píxeles */
+:root {
+    --base: 1600; /* Tamaño base del diseño en píxeles */
+    --tbase: calc(var(--base) * 1px); /* Conversión de la base a una unidad en píxeles */
+    --tcolumna: calc(var(--base) / 12); /* Tamaño de una columna basado en dividir la base en 12 */
+    --pcolumna: calc(var(--tcolumna) / var(--base) * 100%); /* Porcentaje de ancho para una columna */
+}
+
+/* Aplicar box-sizing para incluir padding y bordes dentro de las dimensiones de los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Contenedor principal que centra el contenido y aplica un ancho máximo */
+.wrapper {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: var(--base); /* Ancho máximo definido por la base */
+    margin: 0 auto; /* Se centra el contenedor */
+}
+
+/* Clase de fila para agrupar columnas y limpiar floats */
+.row {
+    clear: both; /* Evita problemas de flotación con elementos anteriores */
+}
+
+/* Clases de columnas que calculan su ancho basado en el sistema de 12 columnas */
+/* Una columna de ancho */
+.col-1 {
+    float: left; /* Posicionar elementos en línea usando float */
+    width: var(--pcolumna); /* Ancho de una columna en porcentaje */
+}
+
+/* Dos columnas de ancho */
+.col-2 {
+    float: left;
+    width: calc(var(--pcolumna) * 2); /* Dos columnas (ancho x 2) */
+}
+
+/* Tres columnas de ancho */
+.col-3 {
+    float: left;
+    width: calc(var(--pcolumna) * 3); /* Tres columnas (ancho x 3) */
+}
+
+/* Cuatro columnas de ancho */
+.col-4 {
+    float: left;
+    width: calc(var(--pcolumna) * 4); /* Cuatro columnas (ancho x 4) */
+}
+
+/* Cinco columnas de ancho */
+.col-5 {
+    float: left;
+    width: calc(var(--pcolumna) * 5); /* Cinco columnas (ancho x 5) */
+}
+
+/* Seis columnas de ancho (mitad del contenedor) */
+.col-6 {
+    float: left;
+    width: calc(var(--pcolumna) * 6); /* Seis columnas (ancho x 6) */
+}
+
+/* Siete columnas de ancho */
+.col-7 {
+    float: left;
+    width: calc(var(--pcolumna) * 7); /* Siete columnas (ancho x 7) */
+}
+
+/* Ocho columnas de ancho */
+.col-8 {
+    float: left;
+    width: calc(var(--pcolumna) * 8); /* Ocho columnas (ancho x 8) */
+}
+
+/* Nueve columnas de ancho */
+.col-9 {
+    float: left;
+    width: calc(var(--pcolumna) * 9); /* Nueve columnas (ancho x 9) */
+}
+
+/* Diez columnas de ancho */
+.col-10 {
+    float: left;
+    width: calc(var(--pcolumna) * 10); /* Diez columnas (ancho x 10) */
+}
+
+/* Once columnas de ancho */
+.col-11 {
+    float: left;
+    width: calc(var(--pcolumna) * 11); /* Once columnas (ancho x 11) */
+}
+
+/* Doce columnas de ancho (ocupa todo el contenedor) */
+.col-12 {
+    float: left;
+    width: calc(var(--pcolumna) * 12); /* Doce columnas (ancho x 12, 100%) */
+}

@@ -1,0 +1,216 @@
+/* Archivo con los estilos CSS aplicados a todos los contenedores, y etiquetas de las paginas html */
+
+/* Estilo aplicado al body, fijando un color base */
+body {
+    background-color: blanchedalmond;
+}
+
+/* Estilo aplicado, que en el html esta aplicado al row del titulo+logo */
+.superior {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo aplicado a todos lo h1 del html, aplicando que se alinee el texto al centro, y un pading al top */
+h1 {
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Estilo aplicado la barra nav con los botones de navegacion, aplicando color, pading, alineado, etc... */
+.barra {
+    list-style-type: none;
+    overflow: hidden;
+    border: 3px solid gainsboro;
+    background-color: blanchedalmond;
+    /* Estilo en concreto de la posicion, con esto se habilita la posicion sticky (pegajoso) */
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Estilo aplicado a todos los ul de listas en los html, un display flex, para que sea flexible y sin decoraciones */
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Aplicacion a los a dentro de los li, que estarian dentro de los ul, haciendo una lista, aplicando color y sin decoraciones */
+li a {
+    display: block;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Estilo aplicado a los a igual que antes, sin embargo se trata de un hover, es decir, cuando pase el raton por encima, 
+se aplicara el cambio de estilo indicado */
+li a:hover {
+    background-color: #4d004dff;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+/* Añadimos en la clase logo el logotipo buscandolo por url en los archivos del proyecto */
+.logo {
+    background: url(../Imagenes/logo.svg);
+    background-size: cover;
+}
+
+/* Al loco antes añadido, le aplico un tamaño fijo en pixeles, para que no se desvirtue con los cambios de estado de la pagina */
+.tamaño_logo {
+    width: 100px;
+    height: 100px;
+}
+
+/* Clase para especificar el tamaño del banner publicitario en horizontal */
+.banner {
+    width: auto;
+    height: 150px;
+    background-size: cover;
+    justify-content: center;
+}
+
+/* Clase para especificar el tamaño del banner publicitario en horizontal en la parte inferior de la pagina */
+.bannerInferior {
+    height: 150px;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+/* Estilo, para centrar en la parte central, todo el contenido añadido en el row donde he puesto el banner en la parte inferior */
+.rowBannerInferior {
+    display: flex;
+    justify-content: center;
+}
+
+/* Clase para especificar el tamaño del banner publicitario en horizontal en las partes intermedias de la pagina*/
+.bannerCentral {
+    height: 150px;
+    margin-left: 20%;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Clase para especificar el tamaño del banner publicitario en vertical */
+.bannerVertical {
+    width: 150px;
+    height: auto;
+    background-size: cover;
+    margin-left: 50px;
+}
+
+/* Estilo aplicado a todas las imagenes que que se añaden a la pagina html de los mercados */
+.imagenMercado {
+    width: 100%;
+    height: 300px;
+    padding: 2px;
+    margin-bottom: 10px;
+    display: flexbox;
+    object-fit: cover;
+}
+
+/* Estilo aplicado a todas las imagenes de persona, que se añaden en la pagina html de la pagina contactos */
+.imagenPersona {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid blanchedalmond;
+}
+
+/* Estilo, para centrar en la parte central, todo el contenido añadido en el row donde he puesto las imagenes de las personas */
+.rowImagenPersona {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo aplicados a todos los h3 de la pagina web, este estilo, se ha añadido al row donde se encuentra los h3 */
+.textoh3 {
+    background-color: rgb(176, 253, 253);
+    text-align: center;
+    background: linear-gradient(#ffff00ff, #008000ff);
+    border-radius: 10px;
+    border: 2px solid blanchedalmond;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilo aplicados a todos los h4 de la pagina web, este estilo, se ha añadido al row donde se encuentra los h4 */
+.textoh4Personas {
+    background-color: rgb(176, 253, 253);
+    text-align: center;
+    background: rgb(211, 211, 211);
+    border-radius: 10px;
+    line-height: 0;
+    border: 2px solid blanchedalmond;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo aplicados a todos los h2 de la pagina web, este estilo, se ha añadido al row donde se encuentra los h2 */
+.textoh2 {
+    text-align: start;
+    padding-left: 25px;
+    background: linear-gradient(#ffff00ff, #4d004dff);
+    border-radius: 10px;
+    border: 2px solid blanchedalmond;
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
+
+/* Estilo aplicado a todos los row especificado donde he puesto la clase, basicamente a los row que ocupan los col-12
+especificando unos margin en cada margen, a modo de sangria. */
+.rowMargin {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* Aplicacion de estilo a los parrafo de la pagina de mercados */
+.parrafoMercados {
+    background-color: blanchedalmond;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Estilo aplicado a la tabla, color, estilo de los bordes, tamaño etc... */
+table {
+    width: 100%;
+    height: 150px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid rgb(129, 175, 60);
+    background-color: rgb(232, 169, 247);
+}
+
+/* Margen aplicado a la segunda tabla de un mismo row, para que guarde una distancia con el primer table del row */
+.tableMargin {
+    margin-left: 17%;
+}
+
+/* Estilo aplicado a los th de la tabla */
+table th {
+    border-bottom: 1px solid black;
+}
+
+/* Estilo aplicado a la clase, footer, haciendo asi que este centrado en la parte central del navegador */
+.footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Aplicado a los parrafos dentro del footer, para que el espaciado entre lineas sea minimo */
+.footer p {
+    margin: 0;
+}
